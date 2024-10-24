@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>SIGN UP FORM</h1>
+        <form action="#" name="form">
+            <table class="table">
+                <tr>
+                    <td>
+                        <input type="text" id="username" name="username" class="form-control" placeholder="enter full name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="email" name="email" class="form-control" placeholder="enter email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="password" name="password" class="form-control" placeholder="enter password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="submit" onclick="validation()" class="btn btn-primary">submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>
+
+            function validation() {
+                let username = form.username.value;
+                let email = form.email.value;
+                let password = form.password.value;
+
+            if (username.length == 0) {
+                    document.getElementById('username').style.borderColor = "red"
+            }
+            else {
+                document.getElementById('username').style.borderColor = "green"
+            }
+
+            if (email.length == 0) {
+                    document.getElementById('email').style.borderColor = "red"
+            }
+            else {
+                document.getElementById('email').style.borderColor = "green"
+            }
+            
+            if (password.length == 0) {
+                    document.getElementById('password').style.borderColor = "red"
+            }
+            else {
+                document.getElementById('password').style.borderColor = "green"
+            }
+        }
+        </script>
+    </div>
+</body>
+</html>
